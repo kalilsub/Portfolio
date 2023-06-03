@@ -19,7 +19,19 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import springboot from "./tech/springboot.png"
+import vue from "./tech/vue.png"
+import reactrouter from "./tech/react-router.png"
+import framermotion from "./tech/framer-motion.svg"
+import python from "./tech/python.png"
+import chakraui from "./tech/chakraUI.png"
+import firebase from "./tech/firebase.png"
+import axios from "./tech/axios.png"
+import threejs from "./tech/Threejs-logo.png"
+import postgres from "./tech/postgres.png"
+import stomp from "./tech/stompjs.png"
+import remix from "./tech/remix.png"
+import vim from "./tech/vim.png"
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -29,6 +41,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import gaming from "./Gaming.gif"
+import vanlife from "./van life demo.gif"
+import quizzical from "./qizzical demo.gif"
+import movielist from "./movielist demo.gif"
 
 export {
   logo,
@@ -52,6 +68,18 @@ export {
   tailwind,
   typescript,
   threejs,
+  springboot,
+  vue,
+  python,
+  reactrouter,
+  chakraui,
+  firebase,
+  framermotion,
+  axios,
+  postgres,
+  stomp,
+  remix,
+  vim,
   meta,
   shopify,
   starbucks,
@@ -59,4 +87,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  gaming,
+  vanlife,
+  quizzical,
+  movielist
 };

@@ -8,6 +8,8 @@ import {
   useTexture,
 } from "@react-three/drei"
 import CanvasLoader from "../Loader"
+import { motion } from "framer-motion"
+import { fadeIn } from "../../utils/motion"
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl])
@@ -34,16 +36,18 @@ const Ball = (props) => {
   )
 }
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon, index }) => {
   return (
-    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+    </motion.div>
   )
 }
 
