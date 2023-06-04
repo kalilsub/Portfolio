@@ -1,7 +1,8 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { styles } from "../styles"
-import { ComputersCanvas } from "./canvas"
+import { ReactLogoCanvas } from "./canvas"
+import { fadeIn } from "../utils/motion"
 
 const Hero = () => {
   return (
@@ -15,16 +16,41 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          <motion.h1
+            initial={{ opacity: 0, y: -100 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                delay: 1.3,
+                duration: 1.4,
+                ease: "easeInOut",
+              },
+            }}
+            className={`${styles.heroHeadText} text-white`}
+          >
             Hi, I'm <span className="text-[#915eff]">Kalil Subaan</span>{" "}
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            a Frontend React Developer from Switzerland <br className="sm:block hidden" />{" "}
-            
-          </p>
+          </motion.h1>
+          <motion.p
+            className={`${styles.heroSubText} mt-2 text-white-100`}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                delay: 2,
+                duration: 0.9,
+                ease: "easeInOut",
+              },
+            }}
+          >
+            a Senior CS Student & React Developer based in Zurich, Switzerland{" "}
+            <br className="sm:block hidden" />{" "}
+          </motion.p>
         </div>
       </div>
-      <ComputersCanvas />
+
+      <ReactLogoCanvas />
 
       {/* <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

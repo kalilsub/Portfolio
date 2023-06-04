@@ -1,6 +1,6 @@
 import EarthCanvas from "./Earth";
 import BallCanvas from "./Ball";
-import ComputersCanvas from "./ReactLogo";
+import ReactLogoCanvas from "./ReactLogo";
 import StarsCanvas from "./Stars";
 
-export { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas };
+export { EarthCanvas, BallCanvas, ReactLogoCanvas, StarsCanvas };

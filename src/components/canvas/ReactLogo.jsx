@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 
 import CanvasLoader from "../Loader"
+import { motion } from "framer-motion"
 
 const ReactLogo = ({ isMobile }) => {
   const reactLogo = useGLTF("./react_logo/scene.gltf")
@@ -65,6 +66,7 @@ const ReactLogoCanvas = () => {
   }, [])
 
   return (
+   
     <Canvas
       shadows
       frameloop="always"
