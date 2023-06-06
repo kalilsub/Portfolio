@@ -1,11 +1,14 @@
 import React, { useState, useRef } from "react"
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 import { styles } from "../styles"
 import { EarthCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
+
 
 //template_6q1mzst
 //service_ielp9p6
@@ -43,7 +46,7 @@ const Contact = () => {
     )
       .then(() => {
         setLoading(false)
-        alert("Thank you! I will get back to you as soon as possible.")
+        toast("Thank you! I will get back to you as soon as possible.")
 
         setForm({
           name: "", 
@@ -122,6 +125,7 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      <ToastContainer position="bottom-right" theme="dark"/>
     </div>
   )
 }
