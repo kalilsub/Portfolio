@@ -21,7 +21,7 @@ const ReactLogo = ({ isMobile }) => {
       />
       <primitive
         object={reactLogo.scene}
-        scale={isMobile ? 0.4 : 0.55}
+        scale={isMobile ? 0.3 : 0.55}
         position-y={-1}
         rotation-y={0}
         position={[0,10,0]}
